@@ -1,4 +1,4 @@
-ComfyUI Pymunk
+ComfyUI Panda3d
 
 ## Examples
 
