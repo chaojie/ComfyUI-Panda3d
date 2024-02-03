@@ -280,6 +280,108 @@ class Panda3dBase(ShowBase):
     def run(self):
         return (self,self.loader,self.render,)
 
+class Panda3dLoadTexture:
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {
+            "required": {
+                "base":("Panda3dBase",),
+                "loader":("Panda3dLoader",),
+                "texture_path": ("STRING",{"default":f"{panda3d_models_path}/carousel_lights_off.jpg"}),
+            }
+        }
+        
+    RETURN_TYPES = ("Panda3dBase","Panda3dTexture",)
+    RETURN_NAMES = ("base","texture",)
+    FUNCTION = "run"
+    CATEGORY = "Panda3d"
+
+    def run(self,base,loader,texture_path):
+        texture=loader.loadTexture(Filename.fromOsSpecific(texture_path))
+        return (base,texture,)
+
+class Panda3dAttachNewNode:
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {
+            "required": {
+                "base":("Panda3dBase",),
+                "parent":("Panda3dModel",),
+                "nodepath": ("STRING",{"default":""}),
+                "x": ("FLOAT", {"default": 0}),
+                "y": ("FLOAT", {"default": 0}),
+                "z": ("FLOAT", {"default": 0}),
+                "h": ("FLOAT", {"default": 0}),
+                "p": ("FLOAT", {"default": 0}),
+                "r": ("FLOAT", {"default": 0}),
+                "sx": ("FLOAT", {"default": 1}),
+                "sy": ("FLOAT", {"default": 1}),
+                "sz": ("FLOAT", {"default": 1}),
+            }
+        }
+        
+    RETURN_TYPES = ("Panda3dBase","Panda3dModel",)
+    RETURN_NAMES = ("base","model",)
+    FUNCTION = "run"
+    CATEGORY = "Panda3d"
+
+    def run(self,base,parent,nodepath,x,y,z,h,p,r,sx,sy,sz):
+        newnode=parent.attachNewNode(nodepath)
+        newnode.setPos(x,y,z)
+        newnode.setHpr(h,p,r)
+        newnode.setScale(sx,sy,sz)
+        return (base,newnode,)
+
+class Panda3dAmbientLight:
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {
+            "required": {
+                "base":("Panda3dBase",),
+                "r": ("FLOAT", {"default": .4}),
+                "g": ("FLOAT", {"default": .4}),
+                "b": ("FLOAT", {"default": .35}),
+                "a": ("FLOAT", {"default": 1}),
+            }
+        }
+        
+    RETURN_TYPES = ("Panda3dBase","Panda3dModel",)
+    RETURN_NAMES = ("base","light",)
+    FUNCTION = "run"
+    CATEGORY = "Panda3d"
+
+    def run(self,base,r,g,b,a):
+        ambientLight = AmbientLight("ambientLight")
+        ambientLight.setColor((r,g,b,a))
+        return (base,ambientLight,)
+
+class Panda3dDirectionalLight:
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {
+            "required": {
+                "base":("Panda3dBase",),
+                "r": ("FLOAT", {"default": .9}),
+                "g": ("FLOAT", {"default": .8}),
+                "b": ("FLOAT", {"default": .9}),
+                "a": ("FLOAT", {"default": 1}),
+                "dx": ("FLOAT", {"default": 0}),
+                "dy": ("FLOAT", {"default": 8}),
+                "dz": ("FLOAT", {"default": -2.5}),
+            }
+        }
+        
+    RETURN_TYPES = ("Panda3dBase","Panda3dModel",)
+    RETURN_NAMES = ("base","light",)
+    FUNCTION = "run"
+    CATEGORY = "Panda3d"
+
+    def run(self,base,r,g,b,a):
+        directionalLight = DirectionalLight("directionalLight")
+        directionalLight.setDirection(LVector3(dx,dy,dz))
+        directionalLight.setColor((r,g,b,a))
+        return (base,directionalLight,)
+
 class Panda3dLoadModel:
     @classmethod
     def INPUT_TYPES(cls):
@@ -314,14 +416,78 @@ class Panda3dLoadModel:
         model.setScale(sx,sy,sz)
         return (base,model,)
 
+class Panda3dModelMerge:
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {
+            "required": {
+                "model1": ("Panda3dModel",),
+                "model2": ("Panda3dModel",),
+            },
+        }
+        
+    RETURN_TYPES = ("Panda3dModel",)
+    RETURN_NAMES = ("models",)
+    FUNCTION = "run"
+    CATEGORY = "Panda3d"
+
+    def run(self,model1,model2):     
+        return (model1+model2,)
+
+class Panda3dTextureMerge:
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {
+            "required": {
+                "texture1": ("Panda3dTexture",),
+                "texture2": ("Panda3dTexture",),
+            },
+        }
+        
+    RETURN_TYPES = ("Panda3dTexture",)
+    RETURN_NAMES = ("textures",)
+    FUNCTION = "run"
+    CATEGORY = "Panda3d"
+
+    def run(self,texture1,texture2): 
+        if type(texture1) is not list:
+            texture1=[texture1]   
+        if type(texture2) is not list:
+            texture2=[texture2] 
+        return (texture1+texture2,)
+
 class Panda3dTest:
     @classmethod
     def INPUT_TYPES(cls):
         return {
             "required": {
                 "base":("Panda3dBase",),
-                "carousel":("Panda3dModel",),
                 "frame_length": ("INT",{"default":14}),
+            },
+            "optional": {
+                "model0":("Panda3dModel",{"default":None}),
+                "model0Animation":("STRING",{"default":"{}"}),
+                "model1":("Panda3dModel",{"default":None}),
+                "model1Animation":("STRING",{"default":"{}"}),
+                "model2":("Panda3dModel",{"default":None}),
+                "model2Animation":("STRING",{"default":"{}"}),
+                "model3":("Panda3dModel",{"default":None}),
+                "model3Animation":("STRING",{"default":"{}"}),
+                "model4":("Panda3dModel",{"default":None}),
+                "model4Animation":("STRING",{"default":"{}"}),
+                "model5":("Panda3dModel",{"default":None}),
+                "model5Animation":("STRING",{"default":"{}"}),
+                "model6":("Panda3dModel",{"default":None}),
+                "model6Animation":("STRING",{"default":"{}"}),
+                "model7":("Panda3dModel",{"default":None}),
+                "model7Animation":("STRING",{"default":"{}"}),
+                "model8":("Panda3dModel",{"default":None}),
+                "model8Animation":("STRING",{"default":"{}"}),
+                "model9":("Panda3dModel",{"default":None}),
+                "model9Animation":("STRING",{"default":"{}"}),
+                "model10":("Panda3dModel",{"default":None}),
+                "model10Animation":("STRING",{"default":"{}"}),
+                "textures":("Panda3dTexture",{"default":None}),
             }
         }
         
@@ -330,21 +496,59 @@ class Panda3dTest:
     FUNCTION = "run"
     CATEGORY = "Panda3d"
 
-    def run(self,base,carousel,frame_length):
+    def run(self,base,frame_length,model0=None,model0Animation="{}",model1=None,model1Animation="{}",model2=None,model2Animation="{}",model3=None,model3Animation="{}",model4=None,model4Animation="{}",model5=None,model5Animation="{}",model6=None,model6Animation="{}",model7=None,model7Animation="{}",model8=None,model8Animation="{}",model9=None,model9Animation="{}",model10=None,model10Animation="{}",textures=None):
         outframes=[]
         #path = os.path.join(folder_paths.output_directory, file_name)
         #base = Panda3dBase()#windowType='offscreen'
         #base.run()
         radius = 20
         step = 1
-        for i in range(frame_length):
-            print(i)
+        models=[model0,model1,model2,model3,model4,model5,model6,model7,model8,model9,model10]
+        animations=[model0Animation,model1Animation,model2Animation,model3Animation,model4Animation,model5Animation,model6Animation,model7Animation,model8Animation,model9Animation,model10Animation]
+        for f in range(frame_length):
+            print(f)
             base.graphicsEngine.renderFrame()
             
-            angleDegrees = i * step
-            angleRadians = angleDegrees * (np.pi / 180.0)
+            for i in range(len(models)):
+                model=models[i]
+                animation=animations[i]
+                if model is None or animation=="{}":
+                    continue
+                animates=json.loads(animation)
+                if "x" in animates.keys():
+                    if len(animates["x"])>f:
+                        model.setX(animates["x"][f])
+                if "y" in animates.keys():
+                    if len(animates["y"])>f:
+                        model.setY(animates["y"][f])
+                if "z" in animates.keys():
+                    if len(animates["z"])>f:
+                        model.setZ(animates["z"][f])
+                if "h" in animates.keys():
+                    if len(animates["h"])>f:
+                        model.setH(animates["h"][f])
+                if "p" in animates.keys():
+                    if len(animates["p"])>f:
+                        model.setP(animates["p"][f])
+                if "r" in animates.keys():
+                    if len(animates["r"])>f:
+                        model.setR(animates["r"][f])
+                if "sx" in animates.keys():
+                    if len(animates["sx"])>f:
+                        model.setSx(animates["sx"][f])
+                if "sy" in animates.keys():
+                    if len(animates["sy"])>f:
+                        model.setSy(animates["sy"][f])
+                if "sz" in animates.keys():
+                    if len(animates["sz"])>f:
+                        model.setSz(animates["sz"][f])
+                if textures is not None and "texture" in animates.keys():
+                    if len(animates["texture"])>f:
+                        model.setTexture(textures[animates["texture"][f]])
+            #angleDegrees = i * step
+            #angleRadians = angleDegrees * (np.pi / 180.0)
 
-            carousel.setHpr(angleDegrees, 0, 0)
+            #carousel.setHpr(angleDegrees, 0, 0)
             
             image = base.get_camera_image()
             #depth_image = base.get_camera_depth_image()
@@ -363,6 +567,12 @@ class Panda3dTest:
 NODE_CLASS_MAPPINGS = {
     "Panda3dBase":Panda3dBase,
     "Panda3dLoadModel":Panda3dLoadModel,
+    "Panda3dAttachNewNode":Panda3dAttachNewNode,
+    "Panda3dLoadTexture":Panda3dLoadTexture,
+    "Panda3dAmbientLight":Panda3dAmbientLight,
+    "Panda3dDirectionalLight":Panda3dDirectionalLight,
+    "Panda3dModelMerge":Panda3dModelMerge,
+    "Panda3dTextureMerge":Panda3dTextureMerge,
     "Panda3dTest":Panda3dTest,
 }
 

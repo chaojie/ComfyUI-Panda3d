@@ -1,145 +1,13 @@
 {
-  "last_node_id": 12,
-  "last_link_id": 39,
+  "last_node_id": 24,
+  "last_link_id": 91,
   "nodes": [
     {
-      "id": 11,
+      "id": 8,
       "type": "Panda3dLoadModel",
       "pos": [
-        516.9257555561607,
-        177.55294069848873
-      ],
-      "size": {
-        "0": 315,
-        "1": 314
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 7,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "base",
-          "type": "Panda3dBase",
-          "link": 36
-        },
-        {
-          "name": "loader",
-          "type": "Panda3dLoader",
-          "link": 29
-        },
-        {
-          "name": "parent",
-          "type": "Panda3dModel",
-          "link": 26
-        }
-      ],
-      "outputs": [
-        {
-          "name": "base",
-          "type": "Panda3dBase",
-          "links": [
-            37
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "model",
-          "type": "Panda3dModel",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Panda3dLoadModel"
-      },
-      "widgets_values": [
-        "C:\\Users\\123\\ComfyUI_windows_portable\\ComfyUI/custom_nodes/ComfyUI-Panda3d/models/carousel_panda",
-        0,
-        0.9,
-        1.3,
-        180,
-        0,
-        0,
-        1,
-        1,
-        1
-      ]
-    },
-    {
-      "id": 10,
-      "type": "Panda3dLoadModel",
-      "pos": [
-        518.9257555561607,
-        238.55294069848867
-      ],
-      "size": {
-        "0": 315,
-        "1": 314
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 6,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "base",
-          "type": "Panda3dBase",
-          "link": 35
-        },
-        {
-          "name": "loader",
-          "type": "Panda3dLoader",
-          "link": 30
-        },
-        {
-          "name": "parent",
-          "type": "Panda3dModel",
-          "link": 24
-        }
-      ],
-      "outputs": [
-        {
-          "name": "base",
-          "type": "Panda3dBase",
-          "links": [
-            36
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "model",
-          "type": "Panda3dModel",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Panda3dLoadModel"
-      },
-      "widgets_values": [
-        "C:\\Users\\123\\ComfyUI_windows_portable\\ComfyUI/custom_nodes/ComfyUI-Panda3d/models/carousel_panda",
-        0,
-        0.9,
-        1.3,
-        90,
-        0,
-        0,
-        1,
-        1,
-        1
-      ]
-    },
-    {
-      "id": 9,
-      "type": "Panda3dLoadModel",
-      "pos": [
-        516.9257555561607,
-        294.5529406984888
+        363.1914066711426,
+        424.1488018554687
       ],
       "size": {
         "0": 315,
@@ -149,444 +17,6 @@
         "collapsed": true
       },
       "order": 5,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "base",
-          "type": "Panda3dBase",
-          "link": 34
-        },
-        {
-          "name": "loader",
-          "type": "Panda3dLoader",
-          "link": 19
-        },
-        {
-          "name": "parent",
-          "type": "Panda3dModel",
-          "link": 18
-        }
-      ],
-      "outputs": [
-        {
-          "name": "base",
-          "type": "Panda3dBase",
-          "links": [
-            35
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "model",
-          "type": "Panda3dModel",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Panda3dLoadModel"
-      },
-      "widgets_values": [
-        "C:\\Users\\123\\ComfyUI_windows_portable\\ComfyUI/custom_nodes/ComfyUI-Panda3d/models/carousel_panda",
-        0,
-        0.9,
-        1.3,
-        0,
-        0,
-        0,
-        1,
-        1,
-        1
-      ]
-    },
-    {
-      "id": 7,
-      "type": "Panda3dLoadModel",
-      "pos": [
-        515.9257555561607,
-        430.55294069848867
-      ],
-      "size": {
-        "0": 315,
-        "1": 314
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 4,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "base",
-          "type": "Panda3dBase",
-          "link": 33
-        },
-        {
-          "name": "loader",
-          "type": "Panda3dLoader",
-          "link": 12
-        },
-        {
-          "name": "parent",
-          "type": "Panda3dModel",
-          "link": 13
-        }
-      ],
-      "outputs": [
-        {
-          "name": "base",
-          "type": "Panda3dBase",
-          "links": [
-            34
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "model",
-          "type": "Panda3dModel",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Panda3dLoadModel"
-      },
-      "widgets_values": [
-        "C:\\Users\\123\\ComfyUI_windows_portable\\ComfyUI/custom_nodes/ComfyUI-Panda3d/models/carousel_lights",
-        0,
-        0,
-        0,
-        36,
-        0,
-        0,
-        1,
-        1,
-        1
-      ]
-    },
-    {
-      "id": 6,
-      "type": "Panda3dLoadModel",
-      "pos": [
-        518.9257555561607,
-        484.55294069848884
-      ],
-      "size": {
-        "0": 315,
-        "1": 314
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 3,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "base",
-          "type": "Panda3dBase",
-          "link": 32
-        },
-        {
-          "name": "loader",
-          "type": "Panda3dLoader",
-          "link": 9
-        },
-        {
-          "name": "parent",
-          "type": "Panda3dModel",
-          "link": 10
-        }
-      ],
-      "outputs": [
-        {
-          "name": "base",
-          "type": "Panda3dBase",
-          "links": [
-            33
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "model",
-          "type": "Panda3dModel",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Panda3dLoadModel"
-      },
-      "widgets_values": [
-        "C:\\Users\\123\\ComfyUI_windows_portable\\ComfyUI/custom_nodes/ComfyUI-Panda3d/models/carousel_lights",
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        1,
-        1,
-        1
-      ]
-    },
-    {
-      "id": 1,
-      "type": "Panda3dTest",
-      "pos": [
-        843.9257555561607,
-        363.5529406984887
-      ],
-      "size": {
-        "0": 315,
-        "1": 82
-      },
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "base",
-          "type": "Panda3dBase",
-          "link": 38
-        },
-        {
-          "name": "carousel",
-          "type": "Panda3dModel",
-          "link": 39
-        }
-      ],
-      "outputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "links": [
-            3
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Panda3dTest"
-      },
-      "widgets_values": [
-        14
-      ]
-    },
-    {
-      "id": 12,
-      "type": "Panda3dLoadModel",
-      "pos": [
-        516.9257555561607,
-        123.55294069848878
-      ],
-      "size": {
-        "0": 315,
-        "1": 314
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 8,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "base",
-          "type": "Panda3dBase",
-          "link": 37
-        },
-        {
-          "name": "loader",
-          "type": "Panda3dLoader",
-          "link": 28
-        },
-        {
-          "name": "parent",
-          "type": "Panda3dModel",
-          "link": 27
-        }
-      ],
-      "outputs": [
-        {
-          "name": "base",
-          "type": "Panda3dBase",
-          "links": [
-            38
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "model",
-          "type": "Panda3dModel",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Panda3dLoadModel"
-      },
-      "widgets_values": [
-        "C:\\Users\\123\\ComfyUI_windows_portable\\ComfyUI/custom_nodes/ComfyUI-Panda3d/models/carousel_panda",
-        0,
-        0.9,
-        1.3,
-        270,
-        0,
-        0,
-        1,
-        1,
-        1
-      ]
-    },
-    {
-      "id": 3,
-      "type": "Panda3dBase",
-      "pos": [
-        50.92575555616006,
-        439.55294069848867
-      ],
-      "size": {
-        "0": 210,
-        "1": 66
-      },
-      "flags": {},
-      "order": 0,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "base",
-          "type": "Panda3dBase",
-          "links": [
-            5
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "loader",
-          "type": "Panda3dLoader",
-          "links": [
-            6,
-            9,
-            12,
-            15,
-            19,
-            28,
-            29,
-            30
-          ],
-          "shape": 3,
-          "slot_index": 1
-        },
-        {
-          "name": "render",
-          "type": "Panda3dModel",
-          "links": [
-            7,
-            16
-          ],
-          "shape": 3,
-          "slot_index": 2
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Panda3dBase"
-      }
-    },
-    {
-      "id": 5,
-      "type": "Panda3dLoadModel",
-      "pos": [
-        523,
-        709
-      ],
-      "size": {
-        "0": 315,
-        "1": 314
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 1,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "base",
-          "type": "Panda3dBase",
-          "link": 5
-        },
-        {
-          "name": "loader",
-          "type": "Panda3dLoader",
-          "link": 6
-        },
-        {
-          "name": "parent",
-          "type": "Panda3dModel",
-          "link": 7
-        }
-      ],
-      "outputs": [
-        {
-          "name": "base",
-          "type": "Panda3dBase",
-          "links": [
-            31
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "model",
-          "type": "Panda3dModel",
-          "links": [
-            10,
-            13,
-            18,
-            24,
-            26,
-            27,
-            39
-          ],
-          "shape": 3,
-          "slot_index": 1
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Panda3dLoadModel"
-      },
-      "widgets_values": [
-        "C:\\Users\\123\\ComfyUI_windows_portable\\ComfyUI/custom_nodes/ComfyUI-Panda3d/models/carousel_base",
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        1,
-        1,
-        1
-      ]
-    },
-    {
-      "id": 8,
-      "type": "Panda3dLoadModel",
-      "pos": [
-        515,
-        606
-      ],
-      "size": {
-        "0": 315,
-        "1": 314
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 2,
       "mode": 0,
       "inputs": [
         {
@@ -623,6 +53,7 @@
           "slot_index": 1
         }
       ],
+      "title": "env",
       "properties": {
         "Node name for S&R": "Panda3dLoadModel"
       },
@@ -640,40 +71,1145 @@
       ]
     },
     {
-      "id": 4,
-      "type": "PreviewImage",
+      "id": 16,
+      "type": "Panda3dAttachNewNode",
       "pos": [
-        1300,
-        355
+        640.1914066711425,
+        567.1488018554687
+      ],
+      "size": {
+        "0": 315,
+        "1": 294
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "base",
+          "type": "Panda3dBase",
+          "link": 64
+        },
+        {
+          "name": "parent",
+          "type": "Panda3dModel",
+          "link": 47
+        }
+      ],
+      "outputs": [
+        {
+          "name": "base",
+          "type": "Panda3dBase",
+          "links": [
+            65
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "model",
+          "type": "Panda3dModel",
+          "links": [
+            58
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "title": "panda0",
+      "properties": {
+        "Node name for S&R": "Panda3dAttachNewNode"
+      },
+      "widgets_values": [
+        "panda3",
+        0,
+        0,
+        1.3,
+        270,
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": 15,
+      "type": "Panda3dAttachNewNode",
+      "pos": [
+        637.1914066711425,
+        421.1488018554687
+      ],
+      "size": {
+        "0": 315,
+        "1": 294
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "base",
+          "type": "Panda3dBase",
+          "link": 65
+        },
+        {
+          "name": "parent",
+          "type": "Panda3dModel",
+          "link": 45
+        }
+      ],
+      "outputs": [
+        {
+          "name": "base",
+          "type": "Panda3dBase",
+          "links": [
+            66
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "model",
+          "type": "Panda3dModel",
+          "links": [
+            55
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "title": "panda1",
+      "properties": {
+        "Node name for S&R": "Panda3dAttachNewNode"
+      },
+      "widgets_values": [
+        "panda2",
+        0,
+        0,
+        1.3,
+        180,
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": 13,
+      "type": "Panda3dAttachNewNode",
+      "pos": [
+        625.1914066711425,
+        165.14880185546875
+      ],
+      "size": {
+        "0": 315,
+        "1": 294
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "base",
+          "type": "Panda3dBase",
+          "link": 67
+        },
+        {
+          "name": "parent",
+          "type": "Panda3dModel",
+          "link": 41
+        }
+      ],
+      "outputs": [
+        {
+          "name": "base",
+          "type": "Panda3dBase",
+          "links": [
+            69
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "model",
+          "type": "Panda3dModel",
+          "links": [
+            48
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "title": "panda3",
+      "properties": {
+        "Node name for S&R": "Panda3dAttachNewNode"
+      },
+      "widgets_values": [
+        "panda0",
+        0,
+        0,
+        1.3,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": 14,
+      "type": "Panda3dAttachNewNode",
+      "pos": [
+        625,
+        276
+      ],
+      "size": {
+        "0": 315,
+        "1": 294
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "base",
+          "type": "Panda3dBase",
+          "link": 66
+        },
+        {
+          "name": "parent",
+          "type": "Panda3dModel",
+          "link": 43
+        }
+      ],
+      "outputs": [
+        {
+          "name": "base",
+          "type": "Panda3dBase",
+          "links": [
+            67
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "model",
+          "type": "Panda3dModel",
+          "links": [
+            51
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "title": "panda2",
+      "properties": {
+        "Node name for S&R": "Panda3dAttachNewNode"
+      },
+      "widgets_values": [
+        "panda1",
+        0,
+        0,
+        1.3,
+        90,
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "type": "Panda3dBase",
+      "pos": [
+        53.19140667114258,
+        140.14880185546875
       ],
       "size": {
         "0": 210,
-        "1": 246
+        "1": 66
       },
       "flags": {},
-      "order": 10,
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "base",
+          "type": "Panda3dBase",
+          "links": [
+            5,
+            74,
+            75
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "loader",
+          "type": "Panda3dLoader",
+          "links": [
+            6,
+            9,
+            12,
+            15,
+            19,
+            52,
+            56,
+            59,
+            76,
+            77
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "render",
+          "type": "Panda3dModel",
+          "links": [
+            7,
+            16
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Panda3dBase"
+      }
+    },
+    {
+      "id": 6,
+      "type": "Panda3dLoadModel",
+      "pos": [
+        354,
+        274
+      ],
+      "size": {
+        "0": 315,
+        "1": 314
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "base",
+          "type": "Panda3dBase",
+          "link": 32
+        },
+        {
+          "name": "loader",
+          "type": "Panda3dLoader",
+          "link": 9
+        },
+        {
+          "name": "parent",
+          "type": "Panda3dModel",
+          "link": 10
+        }
+      ],
+      "outputs": [
+        {
+          "name": "base",
+          "type": "Panda3dBase",
+          "links": [
+            33
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "model",
+          "type": "Panda3dModel",
+          "links": [
+            81
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "title": "lights1",
+      "properties": {
+        "Node name for S&R": "Panda3dLoadModel"
+      },
+      "widgets_values": [
+        "C:\\Users\\123\\ComfyUI_windows_portable\\ComfyUI/custom_nodes/ComfyUI-Panda3d/models/carousel_lights",
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": 7,
+      "type": "Panda3dLoadModel",
+      "pos": [
+        354,
+        159
+      ],
+      "size": {
+        "0": 315,
+        "1": 314
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "base",
+          "type": "Panda3dBase",
+          "link": 33
+        },
+        {
+          "name": "loader",
+          "type": "Panda3dLoader",
+          "link": 12
+        },
+        {
+          "name": "parent",
+          "type": "Panda3dModel",
+          "link": 13
+        }
+      ],
+      "outputs": [
+        {
+          "name": "base",
+          "type": "Panda3dBase",
+          "links": [
+            64
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "model",
+          "type": "Panda3dModel",
+          "links": [
+            82
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "title": "lights2",
+      "properties": {
+        "Node name for S&R": "Panda3dLoadModel"
+      },
+      "widgets_values": [
+        "C:\\Users\\123\\ComfyUI_windows_portable\\ComfyUI/custom_nodes/ComfyUI-Panda3d/models/carousel_lights",
+        0,
+        0,
+        0,
+        36,
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": 5,
+      "type": "Panda3dLoadModel",
+      "pos": [
+        355,
+        571
+      ],
+      "size": {
+        "0": 315,
+        "1": 314
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "base",
+          "type": "Panda3dBase",
+          "link": 5
+        },
+        {
+          "name": "loader",
+          "type": "Panda3dLoader",
+          "link": 6
+        },
+        {
+          "name": "parent",
+          "type": "Panda3dModel",
+          "link": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "base",
+          "type": "Panda3dBase",
+          "links": [
+            31
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "model",
+          "type": "Panda3dModel",
+          "links": [
+            10,
+            13,
+            41,
+            43,
+            45,
+            47,
+            83
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "title": "carousel",
+      "properties": {
+        "Node name for S&R": "Panda3dLoadModel"
+      },
+      "widgets_values": [
+        "C:\\Users\\123\\ComfyUI_windows_portable\\ComfyUI/custom_nodes/ComfyUI-Panda3d/models/carousel_base",
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": 24,
+      "type": "Panda3dTextureMerge",
+      "pos": [
+        953.2594141235347,
+        672.4186563415524
+      ],
+      "size": {
+        "0": 216.59999084472656,
+        "1": 46
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "texture1",
+          "type": "Panda3dTexture",
+          "link": 84
+        },
+        {
+          "name": "texture2",
+          "type": "Panda3dTexture",
+          "link": 85
+        }
+      ],
+      "outputs": [
+        {
+          "name": "textures",
+          "type": "Panda3dTexture",
+          "links": [
+            86
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Panda3dTextureMerge"
+      }
+    },
+    {
+      "id": 22,
+      "type": "Panda3dLoadTexture",
+      "pos": [
+        556,
+        773
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "base",
+          "type": "Panda3dBase",
+          "link": 75
+        },
+        {
+          "name": "loader",
+          "type": "Panda3dLoader",
+          "link": 77
+        }
+      ],
+      "outputs": [
+        {
+          "name": "base",
+          "type": "Panda3dBase",
+          "links": null,
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "texture",
+          "type": "Panda3dTexture",
+          "links": [
+            85
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "title": "light_on",
+      "properties": {
+        "Node name for S&R": "Panda3dLoadTexture"
+      },
+      "widgets_values": [
+        "C:\\Users\\123\\ComfyUI_windows_portable\\ComfyUI/custom_nodes/ComfyUI-Panda3d/models/carousel_lights_on.jpg"
+      ]
+    },
+    {
+      "id": 21,
+      "type": "Panda3dLoadTexture",
+      "pos": [
+        555,
+        707
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "base",
+          "type": "Panda3dBase",
+          "link": 74
+        },
+        {
+          "name": "loader",
+          "type": "Panda3dLoader",
+          "link": 76
+        }
+      ],
+      "outputs": [
+        {
+          "name": "base",
+          "type": "Panda3dBase",
+          "links": null,
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "texture",
+          "type": "Panda3dTexture",
+          "links": [
+            84
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "title": "light_off",
+      "properties": {
+        "Node name for S&R": "Panda3dLoadTexture"
+      },
+      "widgets_values": [
+        "C:\\Users\\123\\ComfyUI_windows_portable\\ComfyUI/custom_nodes/ComfyUI-Panda3d/models/carousel_lights_off.jpg"
+      ]
+    },
+    {
+      "id": 20,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        1576,
+        131
+      ],
+      "size": [
+        315,
+        525.25
+      ],
+      "flags": {},
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
           "name": "images",
           "type": "IMAGE",
-          "link": 3
+          "link": 87
+        },
+        {
+          "name": "audio",
+          "type": "VHS_AUDIO",
+          "link": null
+        },
+        {
+          "name": "batch_manager",
+          "type": "VHS_BatchManager",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null,
+          "shape": 3
         }
       ],
       "properties": {
-        "Node name for S&R": "PreviewImage"
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 8,
+        "loop_count": 0,
+        "filename_prefix": "AnimateDiff",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 19,
+        "save_metadata": true,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "AnimateDiff_00010.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/h264-mp4"
+          }
+        }
       }
+    },
+    {
+      "id": 9,
+      "type": "Panda3dLoadModel",
+      "pos": [
+        891,
+        165
+      ],
+      "size": {
+        "0": 315,
+        "1": 314
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "base",
+          "type": "Panda3dBase",
+          "link": 72
+        },
+        {
+          "name": "loader",
+          "type": "Panda3dLoader",
+          "link": 19
+        },
+        {
+          "name": "parent",
+          "type": "Panda3dModel",
+          "link": 48
+        }
+      ],
+      "outputs": [
+        {
+          "name": "base",
+          "type": "Panda3dBase",
+          "links": [
+            80
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "model",
+          "type": "Panda3dModel",
+          "links": [
+            88
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "title": "panda3model",
+      "properties": {
+        "Node name for S&R": "Panda3dLoadModel"
+      },
+      "widgets_values": [
+        "C:\\Users\\123\\ComfyUI_windows_portable\\ComfyUI/custom_nodes/ComfyUI-Panda3d/models/carousel_panda",
+        0,
+        0.9,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": 17,
+      "type": "Panda3dLoadModel",
+      "pos": [
+        901,
+        283
+      ],
+      "size": {
+        "0": 315,
+        "1": 314
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "base",
+          "type": "Panda3dBase",
+          "link": 71
+        },
+        {
+          "name": "loader",
+          "type": "Panda3dLoader",
+          "link": 52
+        },
+        {
+          "name": "parent",
+          "type": "Panda3dModel",
+          "link": 51
+        }
+      ],
+      "outputs": [
+        {
+          "name": "base",
+          "type": "Panda3dBase",
+          "links": [
+            72
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "model",
+          "type": "Panda3dModel",
+          "links": [
+            89
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "title": "panda2model",
+      "properties": {
+        "Node name for S&R": "Panda3dLoadModel"
+      },
+      "widgets_values": [
+        "C:\\Users\\123\\ComfyUI_windows_portable\\ComfyUI/custom_nodes/ComfyUI-Panda3d/models/carousel_panda",
+        0,
+        0.9,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": 18,
+      "type": "Panda3dLoadModel",
+      "pos": [
+        897,
+        421
+      ],
+      "size": {
+        "0": 315,
+        "1": 314
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "base",
+          "type": "Panda3dBase",
+          "link": 70
+        },
+        {
+          "name": "loader",
+          "type": "Panda3dLoader",
+          "link": 56
+        },
+        {
+          "name": "parent",
+          "type": "Panda3dModel",
+          "link": 55
+        }
+      ],
+      "outputs": [
+        {
+          "name": "base",
+          "type": "Panda3dBase",
+          "links": [
+            71
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "model",
+          "type": "Panda3dModel",
+          "links": [
+            90
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "title": "panda1model",
+      "properties": {
+        "Node name for S&R": "Panda3dLoadModel"
+      },
+      "widgets_values": [
+        "C:\\Users\\123\\ComfyUI_windows_portable\\ComfyUI/custom_nodes/ComfyUI-Panda3d/models/carousel_panda",
+        0,
+        0.9,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": 19,
+      "type": "Panda3dLoadModel",
+      "pos": [
+        895,
+        556
+      ],
+      "size": {
+        "0": 315,
+        "1": 314
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "base",
+          "type": "Panda3dBase",
+          "link": 69
+        },
+        {
+          "name": "loader",
+          "type": "Panda3dLoader",
+          "link": 59
+        },
+        {
+          "name": "parent",
+          "type": "Panda3dModel",
+          "link": 58
+        }
+      ],
+      "outputs": [
+        {
+          "name": "base",
+          "type": "Panda3dBase",
+          "links": [
+            70
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "model",
+          "type": "Panda3dModel",
+          "links": [
+            91
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "title": "panda0model",
+      "properties": {
+        "Node name for S&R": "Panda3dLoadModel"
+      },
+      "widgets_values": [
+        "C:\\Users\\123\\ComfyUI_windows_portable\\ComfyUI/custom_nodes/ComfyUI-Panda3d/models/carousel_panda",
+        0,
+        0.9,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": 23,
+      "type": "Panda3dTest",
+      "pos": [
+        1195,
+        115
+      ],
+      "size": {
+        "0": 315,
+        "1": 562
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "base",
+          "type": "Panda3dBase",
+          "link": 80
+        },
+        {
+          "name": "model0",
+          "type": "Panda3dModel",
+          "link": 83
+        },
+        {
+          "name": "model1",
+          "type": "Panda3dModel",
+          "link": 81
+        },
+        {
+          "name": "model2",
+          "type": "Panda3dModel",
+          "link": 82
+        },
+        {
+          "name": "model3",
+          "type": "Panda3dModel",
+          "link": 88
+        },
+        {
+          "name": "model4",
+          "type": "Panda3dModel",
+          "link": 89
+        },
+        {
+          "name": "model5",
+          "type": "Panda3dModel",
+          "link": 90
+        },
+        {
+          "name": "model6",
+          "type": "Panda3dModel",
+          "link": 91
+        },
+        {
+          "name": "model7",
+          "type": "Panda3dModel",
+          "link": null
+        },
+        {
+          "name": "model8",
+          "type": "Panda3dModel",
+          "link": null
+        },
+        {
+          "name": "model9",
+          "type": "Panda3dModel",
+          "link": null
+        },
+        {
+          "name": "model10",
+          "type": "Panda3dModel",
+          "link": null
+        },
+        {
+          "name": "textures",
+          "type": "Panda3dTexture",
+          "link": 86
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            87
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Panda3dTest"
+      },
+      "widgets_values": [
+        81,
+        "{\"h\":[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 329, 330, 331, 332, 333, 334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 356, 357, 358, 359]}",
+        "{\"texture\":[0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]}",
+        "{\"texture\":[1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0]}",
+        "{\"z\":[-0.18185948536513635, -0.1892600175374829, -0.19476952617563903, -0.19833296209049373, -0.19991472060830104, -0.1994989973208109, -0.19708994599769203, -0.1927116370834386, -0.18640781719344526, -0.1782414720122871, -0.16829419696157932, -0.1566653819254967, -0.14347121817990457, -0.1288435374475382, -0.11292849467900708, -0.0958851077208406, -0.07788366846173012, -0.05910404133226791, -0.03973386615901225, -0.01996668332936563, 0, 0.01996668332936563, 0.03973386615901225, 0.05910404133226791, 0.07788366846173012, 0.0958851077208406, 0.11292849467900708, 0.1288435374475382, 0.14347121817990457, 0.1566653819254967, 0.16829419696157932, 0.1782414720122871, 0.18640781719344526, 0.1927116370834386, 0.19708994599769203, 0.1994989973208109, 0.19991472060830104, 0.19833296209049373, 0.19476952617563903, 0.1892600175374829, 0.18185948536513635, 0.1892600175374829, 0.19476952617563903, 0.19833296209049373, 0.19991472060830104, 0.1994989973208109, 0.19708994599769203, 0.1927116370834386, 0.18640781719344526, 0.1782414720122871, 0.16829419696157932, 0.1566653819254967, 0.14347121817990457, 0.1288435374475382, 0.11292849467900708, 0.0958851077208406, 0.07788366846173012, 0.05910404133226791, 0.03973386615901225, 0.01996668332936563, 0, -0.01996668332936563, -0.03973386615901225, -0.05910404133226791, -0.07788366846173012, -0.0958851077208406, -0.11292849467900708, -0.1288435374475382, -0.14347121817990457, -0.1566653819254967, -0.16829419696157932, -0.1782414720122871, -0.18640781719344526, -0.1927116370834386, -0.19708994599769203, -0.1994989973208109, -0.19991472060830104, -0.19833296209049373, -0.19476952617563903, -0.1892600175374829, -0.18185948536513635]}",
+        "{\"z\":[-0.1994989973208109, -0.19708994599769203, -0.1927116370834386, -0.18640781719344526, -0.1782414720122871, -0.16829419696157932, -0.1566653819254967, -0.14347121817990457, -0.1288435374475382, -0.11292849467900708, -0.0958851077208406, -0.07788366846173012, -0.05910404133226791, -0.03973386615901225, -0.01996668332936563, 0, 0.01996668332936563, 0.03973386615901225, 0.05910404133226791, 0.07788366846173012, 0.0958851077208406, 0.11292849467900708, 0.1288435374475382, 0.14347121817990457, 0.1566653819254967, 0.16829419696157932, 0.1782414720122871, 0.18640781719344526, 0.1927116370834386, 0.19708994599769203, 0.1994989973208109, 0.19991472060830104, 0.19833296209049373, 0.19476952617563903, 0.1892600175374829, 0.18185948536513635, 0.1892600175374829, 0.19476952617563903, 0.19833296209049373, 0.19991472060830104, 0.1994989973208109, 0.19708994599769203, 0.1927116370834386, 0.18640781719344526, 0.1782414720122871, 0.16829419696157932, 0.1566653819254967, 0.14347121817990457, 0.1288435374475382, 0.11292849467900708, 0.0958851077208406, 0.07788366846173012, 0.05910404133226791, 0.03973386615901225, 0.01996668332936563, 0, -0.01996668332936563, -0.03973386615901225, -0.05910404133226791, -0.07788366846173012, -0.0958851077208406, -0.11292849467900708, -0.1288435374475382, -0.14347121817990457, -0.1566653819254967, -0.16829419696157932, -0.1782414720122871, -0.18640781719344526, -0.1927116370834386, -0.19708994599769203, -0.1994989973208109, -0.19991472060830104, -0.19833296209049373, -0.19476952617563903, -0.1892600175374829, -0.18185948536513635, -0.1892600175374829, -0.19476952617563903, -0.19833296209049373, -0.19991472060830104, -0.1994989973208109]}",
+        "{\"z\":[-0.16829419696157932, -0.1566653819254967, -0.14347121817990457, -0.1288435374475382, -0.11292849467900708, -0.0958851077208406, -0.07788366846173012, -0.05910404133226791, -0.03973386615901225, -0.01996668332936563, 0, 0.01996668332936563, 0.03973386615901225, 0.05910404133226791, 0.07788366846173012, 0.0958851077208406, 0.11292849467900708, 0.1288435374475382, 0.14347121817990457, 0.1566653819254967, 0.16829419696157932, 0.1782414720122871, 0.18640781719344526, 0.1927116370834386, 0.19708994599769203, 0.1994989973208109, 0.19991472060830104, 0.19833296209049373, 0.19476952617563903, 0.1892600175374829, 0.18185948536513635, 0.1892600175374829, 0.19476952617563903, 0.19833296209049373, 0.19991472060830104, 0.1994989973208109, 0.19708994599769203, 0.1927116370834386, 0.18640781719344526, 0.1782414720122871, 0.16829419696157932, 0.1566653819254967, 0.14347121817990457, 0.1288435374475382, 0.11292849467900708, 0.0958851077208406, 0.07788366846173012, 0.05910404133226791, 0.03973386615901225, 0.01996668332936563, 0, -0.01996668332936563, -0.03973386615901225, -0.05910404133226791, -0.07788366846173012, -0.0958851077208406, -0.11292849467900708, -0.1288435374475382, -0.14347121817990457, -0.1566653819254967, -0.16829419696157932, -0.1782414720122871, -0.18640781719344526, -0.1927116370834386, -0.19708994599769203, -0.1994989973208109, -0.19991472060830104, -0.19833296209049373, -0.19476952617563903, -0.1892600175374829, -0.18185948536513635, -0.1892600175374829, -0.19476952617563903, -0.19833296209049373, -0.19991472060830104, -0.1994989973208109, -0.19708994599769203, -0.1927116370834386, -0.18640781719344526, -0.1782414720122871, -0.16829419696157932]}",
+        "{\"z\":[-0.0958851077208406, -0.07788366846173012, -0.05910404133226791, -0.03973386615901225, -0.01996668332936563, 0, 0.01996668332936563, 0.03973386615901225, 0.05910404133226791, 0.07788366846173012, 0.0958851077208406, 0.11292849467900708, 0.1288435374475382, 0.14347121817990457, 0.1566653819254967, 0.16829419696157932, 0.1782414720122871, 0.18640781719344526, 0.1927116370834386, 0.19708994599769203, 0.1994989973208109, 0.19991472060830104, 0.19833296209049373, 0.19476952617563903, 0.1892600175374829, 0.18185948536513635, 0.1892600175374829, 0.19476952617563903, 0.19833296209049373, 0.19991472060830104, 0.1994989973208109, 0.19708994599769203, 0.1927116370834386, 0.18640781719344526, 0.1782414720122871, 0.16829419696157932, 0.1566653819254967, 0.14347121817990457, 0.1288435374475382, 0.11292849467900708, 0.0958851077208406, 0.07788366846173012, 0.05910404133226791, 0.03973386615901225, 0.01996668332936563, 0, -0.01996668332936563, -0.03973386615901225, -0.05910404133226791, -0.07788366846173012, -0.0958851077208406, -0.11292849467900708, -0.1288435374475382, -0.14347121817990457, -0.1566653819254967, -0.16829419696157932, -0.1782414720122871, -0.18640781719344526, -0.1927116370834386, -0.19708994599769203, -0.1994989973208109, -0.19991472060830104, -0.19833296209049373, -0.19476952617563903, -0.1892600175374829, -0.18185948536513635, -0.1892600175374829, -0.19476952617563903, -0.19833296209049373, -0.19991472060830104, -0.1994989973208109, -0.19708994599769203, -0.1927116370834386, -0.18640781719344526, -0.1782414720122871, -0.16829419696157932, -0.1566653819254967, -0.14347121817990457, -0.1288435374475382, -0.11292849467900708, -0.0958851077208406]}",
+        "{}",
+        "{}",
+        "{}",
+        "{}"
+      ]
     }
   ],
   "links": [
-    [
-      3,
-      1,
-      0,
-      4,
-      0,
-      "IMAGE"
-    ],
     [
       5,
       3,
@@ -747,66 +1283,10 @@
       "Panda3dModel"
     ],
     [
-      18,
-      5,
-      1,
-      9,
-      2,
-      "Panda3dModel"
-    ],
-    [
       19,
       3,
       1,
       9,
-      1,
-      "Panda3dLoader"
-    ],
-    [
-      24,
-      5,
-      1,
-      10,
-      2,
-      "Panda3dModel"
-    ],
-    [
-      26,
-      5,
-      1,
-      11,
-      2,
-      "Panda3dModel"
-    ],
-    [
-      27,
-      5,
-      1,
-      12,
-      2,
-      "Panda3dModel"
-    ],
-    [
-      28,
-      3,
-      1,
-      12,
-      1,
-      "Panda3dLoader"
-    ],
-    [
-      29,
-      3,
-      1,
-      11,
-      1,
-      "Panda3dLoader"
-    ],
-    [
-      30,
-      3,
-      1,
-      10,
       1,
       "Panda3dLoader"
     ],
@@ -835,51 +1315,283 @@
       "Panda3dBase"
     ],
     [
-      34,
-      7,
-      0,
-      9,
-      0,
-      "Panda3dBase"
-    ],
-    [
-      35,
-      9,
-      0,
-      10,
-      0,
-      "Panda3dBase"
-    ],
-    [
-      36,
-      10,
-      0,
-      11,
-      0,
-      "Panda3dBase"
-    ],
-    [
-      37,
-      11,
-      0,
-      12,
-      0,
-      "Panda3dBase"
-    ],
-    [
-      38,
-      12,
-      0,
-      1,
-      0,
-      "Panda3dBase"
-    ],
-    [
-      39,
+      41,
       5,
       1,
+      13,
       1,
+      "Panda3dModel"
+    ],
+    [
+      43,
+      5,
       1,
+      14,
+      1,
+      "Panda3dModel"
+    ],
+    [
+      45,
+      5,
+      1,
+      15,
+      1,
+      "Panda3dModel"
+    ],
+    [
+      47,
+      5,
+      1,
+      16,
+      1,
+      "Panda3dModel"
+    ],
+    [
+      48,
+      13,
+      1,
+      9,
+      2,
+      "Panda3dModel"
+    ],
+    [
+      51,
+      14,
+      1,
+      17,
+      2,
+      "Panda3dModel"
+    ],
+    [
+      52,
+      3,
+      1,
+      17,
+      1,
+      "Panda3dLoader"
+    ],
+    [
+      55,
+      15,
+      1,
+      18,
+      2,
+      "Panda3dModel"
+    ],
+    [
+      56,
+      3,
+      1,
+      18,
+      1,
+      "Panda3dLoader"
+    ],
+    [
+      58,
+      16,
+      1,
+      19,
+      2,
+      "Panda3dModel"
+    ],
+    [
+      59,
+      3,
+      1,
+      19,
+      1,
+      "Panda3dLoader"
+    ],
+    [
+      64,
+      7,
+      0,
+      16,
+      0,
+      "Panda3dBase"
+    ],
+    [
+      65,
+      16,
+      0,
+      15,
+      0,
+      "Panda3dBase"
+    ],
+    [
+      66,
+      15,
+      0,
+      14,
+      0,
+      "Panda3dBase"
+    ],
+    [
+      67,
+      14,
+      0,
+      13,
+      0,
+      "Panda3dBase"
+    ],
+    [
+      69,
+      13,
+      0,
+      19,
+      0,
+      "Panda3dBase"
+    ],
+    [
+      70,
+      19,
+      0,
+      18,
+      0,
+      "Panda3dBase"
+    ],
+    [
+      71,
+      18,
+      0,
+      17,
+      0,
+      "Panda3dBase"
+    ],
+    [
+      72,
+      17,
+      0,
+      9,
+      0,
+      "Panda3dBase"
+    ],
+    [
+      74,
+      3,
+      0,
+      21,
+      0,
+      "Panda3dBase"
+    ],
+    [
+      75,
+      3,
+      0,
+      22,
+      0,
+      "Panda3dBase"
+    ],
+    [
+      76,
+      3,
+      1,
+      21,
+      1,
+      "Panda3dLoader"
+    ],
+    [
+      77,
+      3,
+      1,
+      22,
+      1,
+      "Panda3dLoader"
+    ],
+    [
+      80,
+      9,
+      0,
+      23,
+      0,
+      "Panda3dBase"
+    ],
+    [
+      81,
+      6,
+      1,
+      23,
+      2,
+      "Panda3dModel"
+    ],
+    [
+      82,
+      7,
+      1,
+      23,
+      3,
+      "Panda3dModel"
+    ],
+    [
+      83,
+      5,
+      1,
+      23,
+      1,
+      "Panda3dModel"
+    ],
+    [
+      84,
+      21,
+      1,
+      24,
+      0,
+      "Panda3dTexture"
+    ],
+    [
+      85,
+      22,
+      1,
+      24,
+      1,
+      "Panda3dTexture"
+    ],
+    [
+      86,
+      24,
+      0,
+      23,
+      12,
+      "Panda3dTexture"
+    ],
+    [
+      87,
+      23,
+      0,
+      20,
+      0,
+      "IMAGE"
+    ],
+    [
+      88,
+      9,
+      1,
+      23,
+      4,
+      "Panda3dModel"
+    ],
+    [
+      89,
+      17,
+      1,
+      23,
+      5,
+      "Panda3dModel"
+    ],
+    [
+      90,
+      18,
+      1,
+      23,
+      6,
+      "Panda3dModel"
+    ],
+    [
+      91,
+      19,
+      1,
+      23,
+      7,
       "Panda3dModel"
     ]
   ],
@@ -887,10 +1599,10 @@
     {
       "title": "Group",
       "bounding": [
-        41,
-        50,
-        1479,
-        669
+        37,
+        26,
+        1503,
+        766
       ],
       "color": "#3f789e",
       "font_size": 24
