@@ -4,6 +4,7 @@ loadPrcFileData("", "window-type offscreen" )
 loadPrcFileData("", "audio-library-name null" ) # Prevent ALSA errors
 loadPrcFileData('', 'show-frame-rate-meter true')
 loadPrcFileData('', 'sync-video 0')
+loadPrcFileData('', 'load-file-type p3assimp')
 from direct.showbase.ShowBase import ShowBase
 from panda3d.core import FrameBufferProperties, WindowProperties
 from panda3d.core import GraphicsPipe, GraphicsOutput
@@ -14,7 +15,7 @@ from panda3d.core import LVector3
 from panda3d.core import Filename
 from direct.interval.IntervalGlobal import *  # Needed to use Intervals
 from direct.gui.DirectGui import *
-from math import pi, sin
+from math import pi, sin, tan, sqrt
 import sys
 import os
 import json
@@ -23,6 +24,7 @@ import numpy as np
 from PIL import Image, ImageFilter
 import folder_paths
 import time
+from datetime import datetime
 import cv2
 
 comfy_path = os.path.dirname(folder_paths.__file__)
@@ -52,7 +54,154 @@ def show_rgbd_image(image, depth_image, window_name='Image window', delay=1, dep
         exit_request = False
     return exit_request
 
+def create_mtl(mtlPath, matName, texturePath):
+    if max(mtlPath.find('\\'), mtlPath.find('/')) > -1:
+        os.makedirs(os.path.dirname(mtlPath), exist_ok=True)
+    with open(mtlPath, "w") as f:
+        f.write("newmtl " + matName + "\n"      )
+        f.write("Ns 10.0000\n"                  )
+        f.write("d 1.0000\n"                    )
+        f.write("Tr 0.0000\n"                   )
+        f.write("illum 2\n"                     )
+        f.write("Ka 1.000 1.000 1.000\n"        )
+        f.write("Kd 1.000 1.000 1.000\n"        )
+        f.write("Ks 0.000 0.000 0.000\n"        )
+        f.write("map_Ka " + os.path.basename(texturePath) + "\n"  )
+        f.write("map_Kd " + os.path.basename(texturePath) + "\n"  )
+
+def vete(v, vt):
+    return str(v)+"/"+str(vt)
+
+def create_obj(depthPath, depthInvert, objPath, mtlPath, matName, useMaterial = True):
+    test_img=cv2.imread(depthPath)
+    coefficients = np.uint16(256 * np.array((.114, .587, .299)))
+    img=test_img.dot(coefficients)
+    #img = cv2.imread(depthPath, -1).astype(np.float32) / 1000.0
+    img=img/1000.0
+
+    if len(img.shape) > 2 and img.shape[2] > 1:
+       print('Expecting a 1D map, but depth map at path %s has shape %r'% (depthPath, img.shape))
+       return
+
+    if depthInvert == True:
+        img = 1.0 - img
+
+    w = img.shape[1]
+    h = img.shape[0]
+
+    FOV = pi/4
+    D = (img.shape[0]/2)/tan(FOV/2)
+
+    if max(objPath.find('\\'), objPath.find('/')) > -1:
+        os.makedirs(os.path.dirname(mtlPath), exist_ok=True)
+    
+    with open(objPath,"w") as f:    
+        if useMaterial:
+            f.write("mtllib " +  os.path.basename(mtlPath) + "\n")
+            f.write("usemtl " + matName + "\n")
+
+        ids = np.zeros((img.shape[1], img.shape[0]), int)
+        vid = 1
+
+        for u in range(0, w):
+            for v in range(h-1, -1, -1):
+
+                d = img[v, u]
+
+                ids[u,v] = vid
+                if d == 0.0:
+                    ids[u,v] = 0
+                vid += 1
+
+                x = u - w/2
+                y = v - h/2
+                z = -D
+
+                norm = 1 / sqrt(x*x + y*y + z*z)
+
+                t = d/(z*norm)
+
+                x = -t*x*norm
+                y = t*y*norm
+                z = -t*z*norm        
+
+                f.write("v " + str(x) + " " + str(y) + " " + str(z) + "\n")
+
+        for u in range(0, img.shape[1]):
+            for v in range(0, img.shape[0]):
+                f.write("vt " + str(u/img.shape[1]) + " " + str(v/img.shape[0]) + "\n")
+
+        for u in range(0, img.shape[1]-1):
+            for v in range(0, img.shape[0]-1):
+
+                v1 = ids[u,v]; v2 = ids[u+1,v]; v3 = ids[u,v+1]; v4 = ids[u+1,v+1];
+
+                if v1 == 0 or v2 == 0 or v3 == 0 or v4 == 0:
+                    continue
+
+                f.write("f " + vete(v1,v1) + " " + vete(v2,v2) + " " + vete(v3,v3) + "\n")
+                f.write("f " + vete(v3,v3) + " " + vete(v2,v2) + " " + vete(v4,v4) + "\n")
+
+class Panda3dLoadDepthModel:
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {
+            "required": {
+                "base":("Panda3dBase",),
+                "loader":("Panda3dLoader",),
+                "parent":("Panda3dModel",),
+                "depthimg":("IMAGE",),
+                "textureimg":("IMAGE",),
+                "x": ("FLOAT", {"default": 0}),
+                "y": ("FLOAT", {"default": 0}),
+                "z": ("FLOAT", {"default": 0}),
+                "h": ("FLOAT", {"default": 0}),
+                "p": ("FLOAT", {"default": 90}),
+                "r": ("FLOAT", {"default": 0}),
+                "sx": ("FLOAT", {"default": 1}),
+                "sy": ("FLOAT", {"default": 1}),
+                "sz": ("FLOAT", {"default": 1}),
+            }
+        }
+    RETURN_TYPES = ("Panda3dBase","Panda3dModel",)
+    RETURN_NAMES = ("base","model",)
+    FUNCTION = "run"
+    CATEGORY = "Panda3d"
+
+    def run(self,base,loader,parent,depthimg,textureimg,x,y,z,h,p,r,sx,sy,sz):
+        textureimg = 255.0 * textureimg[0].cpu().numpy()
+        textureimg = Image.fromarray(np.clip(textureimg, 0, 255).astype(np.uint8))
+        now=int(datetime.now().timestamp())
+        texturePath=f'{panda3d_models_path}/output/texture{now}.png'
+        mtlPath=f'{panda3d_models_path}/output/mtl{now}.mtl'
+        os.makedirs(os.path.dirname(mtlPath), exist_ok=True)
+        textureimg.save(texturePath)
+        matName=f'mtl{now}'
+
+        create_mtl(mtlPath, matName, texturePath)
+
+        depthimg = 255.0 * depthimg[0].cpu().numpy()
+        depthimg = Image.fromarray(np.clip(depthimg, 0, 255).astype(np.uint8))
+        depthPath=f'{panda3d_models_path}/output/depth{now}.png'
+        depthimg.save(depthPath)
+
+        objPath=f'{panda3d_models_path}/output/depth{now}.obj'
+
+        create_obj(depthPath, True, objPath, mtlPath, matName, True)
+
+        time.sleep(1)
+        model = loader.loadModel(Filename.fromOsSpecific(objPath))
+        model.reparentTo(parent)
+        model.setPos(x,y,z)
+        model.setHpr(h,p,r)
+        model.setScale(sx,sy,sz)
+        return (base,model,)
+
 class Panda3dBase(ShowBase):
+    @classmethod
+    def IS_CHANGED(s):
+        return int(datetime.now())
+
     @classmethod
     def INPUT_TYPES(cls):
         return {
@@ -66,7 +215,11 @@ class Panda3dBase(ShowBase):
     CATEGORY = "Panda3d"
 
     def __init__(self):
-        super(Panda3dBase, self).__init__()
+        try:
+            super(Panda3dBase, self).__init__()
+        except:
+            self.destroy()
+            super(Panda3dBase, self).__init__()
 
         base.disableMouse()  # Allow manual positioning of the camera
         camera.setPosHpr(0, -8, 2.5, 0, -9, 0)
@@ -560,8 +713,13 @@ class Panda3dTest:
             image_tensor_out = torch.unsqueeze(image_tensor_out, 0)
             outframes.append(image_tensor_out)
             Wait(1)
-            
-        #base.destroy()
+
+        for i in range(len(models)):
+            model=models[i]
+            if model is None:
+                continue
+            model.get_children().detach()
+        
         return torch.cat(tuple(outframes), dim=0).unsqueeze(0)
 
 NODE_CLASS_MAPPINGS = {
@@ -574,5 +732,6 @@ NODE_CLASS_MAPPINGS = {
     "Panda3dModelMerge":Panda3dModelMerge,
     "Panda3dTextureMerge":Panda3dTextureMerge,
     "Panda3dTest":Panda3dTest,
+    "Panda3dLoadDepthModel":Panda3dLoadDepthModel,
 }
 
